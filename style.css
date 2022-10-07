@@ -1,0 +1,89 @@
+@charset "UTF-8"; 
+
+/*==========Google Fonts Montserrat==========*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*==========Reset CSS==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*==========Base==========*/
+body {
+    font-style: normal;
+    font-size: 1rem;
+}
+
+/*==========Cards==========*/
+.cards {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin: -15rem 0 0 -10rem;
+}
+.cards .card {
+    position: absolute;
+    display: block;
+    background: rgb(255, 255, 255);
+    width: 17rem;
+    height: 22rem;
+    top: 0;
+    left: 0;
+    transform-origin: bottom center;
+    border: 1px solid rgba(0, 0, 0, 0.063);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.09);
+    z-index: 1;
+    overflow: hidden;
+}
+.cards .card ::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+}
+.cards .card span, a, p {
+    position: relative;
+    z-index: 2;
+}
+.cards .card span {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.562);
+}
+.cards .card a {
+    position: relative;
+    display: inline-block;
+    border-radius: .2rem;
+    padding: .5rem;
+    top: 0;
+    left: 1rem;
+    transition: .7s cubic-bezier(0.68, 0, 0.265, 1.55);
+    color: #fff;
+    background: #f9bd41;
+}
+.cards .card a:hover {
+    transform: scale(1.1);
+}
+.cards .card p {
+    padding: .7rem .5rem;
+    color: #999;
+}
+.cards .card:nth-child(1) {
+    transform: rotate(10deg) skew(-20deg) translate(10px, 10px);
+}
+.cards .card:nth-child(2) {
+    transform: rotate(10deg) skew(-20deg) translate(0px, 0px);
+}
+.cards .card:nth-child(3) {
+    transform: rotate(10deg) skew(-20deg) translate(-10px, -10px);
+}
+
